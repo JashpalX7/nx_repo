@@ -12,54 +12,14 @@ export class SidebarComponent implements OnInit, OnChanges {
 
   public sidebarMenus: any = [
     {
-      title: "Client",
-      url: "client",
-      icon: "/assets/images/login.svg"
-    },
-    {
-      title: "Dashboard",
-      url: "dashboard",
-      icon: "/assets/images/dashboard.svg"
-    },
-    {
       title: "Task Management",
       url: "task-management",
       icon: "/assets/images/task-management.svg"
     },
     {
-      title: "Documents",
-      url: "documents",
-      icon: "/assets/images/document.svg"
-    },
-    {
-      title: "Reports",
-      url: "reports",
-      icon: "/assets/images/reports.svg"
-    },
-    {
-      title: "Application",
-      url: "application",
-      icon: "/assets/images/application.svg"
-    },
-    {
-      title: "Activity Feeds",
-      url: "activity-feeds",
-      icon: "/assets/images/activity-feeds.svg"
-    },
-    {
       title: "On Boarding",
       url: "on-boarding",
       icon: "/assets/images/activity-feeds.svg"
-    },
-    {
-      title: "Autoreview",
-      url: "autoreview",
-      icon: "/assets/images/autoreview.svg"
-    },
-    {
-      title: "Port",
-      url: "port",
-      icon: "/assets/images/port.svg"
     },
     {
       title: "Setting",
