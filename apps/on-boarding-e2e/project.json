@@ -1,0 +1,28 @@
+{
+  "root": "apps/on-boarding-e2e",
+  "sourceRoot": "apps/on-boarding-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/on-boarding-e2e/cypress.json",
+        "devServerTarget": "on-boarding:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "on-boarding:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/on-boarding-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["on-boarding"]
+}

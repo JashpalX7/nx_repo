@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "projects": {
+    "master": "apps/master",
+    "master-e2e": "apps/master-e2e",
+    "on-boarding": "apps/on-boarding",
+    "on-boarding-e2e": "apps/on-boarding-e2e",
+    "shared-assets": "libs/shared/assets",
+    "shared-header": "libs/shared/header",
+    "shared-material": "libs/shared/material",
+    "shared-sidebar": "libs/shared/sidebar",
+    "shared-styles": "libs/shared/styles",
+    "task-management": "apps/task-management",
+    "task-management-e2e": "apps/task-management-e2e"
+  }
+}

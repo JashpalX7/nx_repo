@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@xt-hub/shared/assets": ["libs/shared/assets/src/index.ts"],
+      "@xt-hub/shared/header": ["libs/shared/header/src/index.ts"],
+      "@xt-hub/shared/material": ["libs/shared/material/src/index.ts"],
+      "@xt-hub/shared/sidebar": ["libs/shared/sidebar/src/index.ts"],
+      "@xt-hub/shared/styles": ["libs/shared/styles/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

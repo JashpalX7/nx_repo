@@ -1,0 +1,22 @@
+
+<div class="side-bar" id="mySidenav">
+    <div class="main-sidebar-header">
+        <div class="main-sidebar-header-logo">
+            <a><img src="../../assets/images/elevar-logo.svg"></a>
+        </div>
+        <div class="main-sidebar-header-text">
+            Elevar A/c Services
+        </div>
+    </div> 
+    
+    <!-- routerLink="{{menu.url}}" -->
+    <a *ngFor="let menu of sidebarMenus" class="sidebar-menu-item" (click)="changeRoute(menu?.url)" >
+        <img src="{{menu?.icon}}">
+        <span>{{menu?.title}}</span>
+    </a>
+    <!-- <a *ngFor="let menu of sidebarMenus" class="sidebar-menu-item"  [routerLink]="[{ outlets: { master: [menu.url] } }]"  routerLinkActive="active-link">
+        <img src="{{menu.icon}}">
+        <span>{{menu.title}}</span>
+    </a> -->
+
+</div>

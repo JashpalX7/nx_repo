@@ -1,0 +1,48 @@
+//input
+xt-input{
+    .xt-img-seprater{
+        display: none !important;
+    }
+    input{
+        padding: 12px !important;
+        max-width: 100% !important;
+        &:focus{
+            background: none !important;
+        }
+    }
+}
+//single select
+xt-single-select{
+    .ng-select-container{
+        border: none !important;
+        color: #687884 !important;
+        .ng-arrow{
+            top: 3px !important;
+        }
+    }
+  
+}
+//title
+.xt_title6{
+    font-family: unset  !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    padding-bottom: 13px;
+}
+//button
+.xt-button{
+    font-size: 12px !important;
+    border-radius: 4px !important;
+}
+//button-secondary
+.xt-button-secondary{
+    border: 1px solid var(--primary-color1) !important;
+    color: var(--primary-color1) !important;
+    background: unset !important;
+}
+//button-primary
+.xt-button-primary{
+    border: unset !important;
+    color: #fff !important;
+    background: var(--primary-color1) !important;
+}

@@ -1,0 +1,29 @@
+.main-layout-block {
+    display: flex;
+    .main-layout-left{
+        box-shadow: 4px 0px 30px rgb(0 0 0 / 5%);
+        z-index: 1;
+        border-right: 1.35px solid #EDEDF5;
+    }
+    .main-layout-right {
+        width: calc(100% - 230px);
+        height: 100vh;
+        .main-layout-body {
+            position: relative;
+            background: #fff;
+            height: calc(100% - 60px);
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+    }
+}
+.toggle-full-width{
+    width: 100% !important;
+   
+
+}
+.xt-hub-header{
+    position: fixed;
+    top: 0;
+}

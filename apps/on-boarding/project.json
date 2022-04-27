@@ -1,0 +1,121 @@
+{
+  "projectType": "application",
+  "root": "apps/on-boarding",
+  "sourceRoot": "apps/on-boarding/src",
+  "prefix": "xt-hub",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "apps/on-boarding/dist",
+        "index": "apps/on-boarding/src/index.html",
+        "main": "apps/on-boarding/src/main.ts",
+        "polyfills": "apps/on-boarding/src/polyfills.ts",
+        "tsConfig": "apps/on-boarding/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/on-boarding/src/favicon.ico",
+          "apps/on-boarding/src/assets"
+        ],
+        "styles": ["apps/on-boarding/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/on-boarding/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/on-boarding/src/environments/environment.ts",
+              "with": "apps/on-boarding/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/on-boarding/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nrwl/angular:webpack-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "on-boarding:build:production"
+        },
+        "development": {
+          "browserTarget": "on-boarding:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4203,
+        "publicHost": "http://localhost:4203"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "on-boarding:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/on-boarding/**/*.ts",
+          "apps/on-boarding/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/on-boarding"],
+      "options": {
+        "jestConfig": "apps/on-boarding/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/angular:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "on-boarding:build",
+        "port": 4203
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "on-boarding:build:development"
+        },
+        "production": {
+          "buildTarget": "on-boarding:build:production"
+        }
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["shared-assets", "shared-styles"]
+}
